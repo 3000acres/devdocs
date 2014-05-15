@@ -80,11 +80,20 @@ what they want done next is always at the top of the backlog.
 
 To work on a story:
 
-* Pick something from near the top of the backlog
-* Click "start".
+* Pick something from near the top of the backlog (it doesn't have to be
+  the top item -- just something reasonably near the top that fits
+  your skills and available time.)
+* Click "start".  The story will be moved to the "Current" column.
 * Examine the story as written.  If you need more information to
-  proceed, seek it from 3A staff.
-* Break down the story into tasks
+  proceed, seek it from 3A staff, and update the description to be more
+  informative.  You can also attach pics etc if needed..
+* Break down the story into tasks.  For instance, a simple "add a field"
+  story might read something like:
+  * write feature tests (marked as pending)
+  * rails g migration...
+  * update model
+  * update form and controller to add the field
+  * update site detail page to show the data
 * Work through the tasks, ticking them off as you go
 * Commit frequently, making sure you have working tests at each stage
 * When you are done (or taking an extended break) push your work up to
