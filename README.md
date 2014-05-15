@@ -7,11 +7,34 @@ it.
 
 It covers such topics as:
 
+* things to sign up for
 * setting up your development environment
 * the development process
 * how we deploy changes
 
+## Things to sign up for
+
+Dev tools etc:
+
+* http://github.com (also add your ssh key)
+* http://heroku.com (also add your ssh key)
+* http://travis-ci.org
+* http://pivotaltracker.com/
+
+3000 Acres instances (you should have an account on each):
+
+* http://acres-staging.herokuapp.com -- staging
+* http://3000acres.org -- production
+
 ## Setting up your developer environment
+
+These instructions are largely based on the [Growstuff developer
+docs](http://wiki.growstuff.org/index.php/Development/Getting_Started),
+as 3000 Acres is largely based on Growstuff in terms of code layout and
+dev process.  If you want more detail/get stuck/are interested you might
+like to take a look at the Growstuff docs, as they have a bit more
+detail in some areas.  (If needed, we can copy more of the Growstuff
+docs over here.)
 
 These instructions are for Mac users on OSX.  They should also work for
 Linux users.  We do not support developers on Windows at this time.
@@ -36,6 +59,30 @@ Then (replacing your name as appropriate):
 If you have set up an ssh key on github (and you should!) you can use this instead, and avoid having to type in your password so much:
 
    git clone git@github.com:YOURNAME/3000acres.git
+
+Let's set up a git remote for "upstream" i.e. the 3000acres/3000acres
+repo:
+
+    git remote add upstream https://github.com/3000acres/3000acres.git
+
+### Recommended bashrc settings
+
+These may make your dev experience more pleasant.
+
+   # this will help find the paths for rails and stuff
+   # Load RVM into a shell session *as a function*
+   [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
+   # use magic git completion in bash (default in ubuntu; you'll want
+   # to download the bash_completion script and put it somewhere in
+   # your $HOME if you're on OSX
+   if [ -f /etc/bash_completion ]; then
+       . /etc/bash_completion
+   fi
+
+   # set up magic awesome prompt to tell you what branch you're on
+   export PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
+
 
 ### Set up your rails environment
 
@@ -94,6 +141,7 @@ To work on a story:
   * update model
   * update form and controller to add the field
   * update site detail page to show the data
+* Create a git branch to work on: `git checkout -b storyname`
 * Work through the tasks, ticking them off as you go
 * Commit frequently, making sure you have working tests at each stage
 * When you are done (or taking an extended break) push your work up to
