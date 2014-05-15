@@ -69,19 +69,19 @@ repo:
 
 These may make your dev experience more pleasant.
 
-   # this will help find the paths for rails and stuff
-   # Load RVM into a shell session *as a function*
-   [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+    # this will help find the paths for rails and stuff
+    # Load RVM into a shell session *as a function*
+    [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
-   # use magic git completion in bash (default in ubuntu; you'll want
-   # to download the bash_completion script and put it somewhere in
-   # your $HOME if you're on OSX
-   if [ -f /etc/bash_completion ]; then
-       . /etc/bash_completion
-   fi
+    # use magic git completion in bash (default in ubuntu; you'll want
+    # to download the bash_completion script and put it somewhere in
+    # your $HOME if you're on OSX
+    if [ -f /etc/bash_completion ]; then
+        . /etc/bash_completion
+    fi
 
-   # set up magic awesome prompt to tell you what branch you're on
-   export PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
+    # set up magic awesome prompt to tell you what branch you're on
+    export PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
 
 
 ### Set up your rails environment
