@@ -162,10 +162,10 @@ To work on a story:
 * Once a new feature has been merged to dev, it is pushed to our Heroku
   "staging" environment, http://acres-staging.herokuapp.com
 
-  git push staging dev:master
-  heroku run rake db:migrate --app=acres-staging
-  heroku run script/deploy-tasks.sh --app=acres-staging
-  heroku restart --app=acres-staging
+    git push staging dev:master
+    heroku run rake db:migrate --app=acres-staging
+    heroku run script/deploy-tasks.sh --app=acres-staging
+    heroku restart --app=acres-staging
 
 * Click "Deliver" in PT.
 * Add a comment in PT under "activity", letting 3A staff know that the
@@ -191,12 +191,12 @@ To work on a story:
 
 To deploy to production:
 
-  heroku maintenance:on --app=acres-production
-  git push production master
-  heroku run rake db:migrate --app=acres-production
-  heroku run script/deploy-tasks.sh --app=acres-production
-  heroku restart --app=acres-production
-  heroku maintenance:off --app=acres-production
-  
+    heroku maintenance:on --app=acres-production
+    git push production master
+    heroku run rake db:migrate --app=acres-production
+    heroku run script/deploy-tasks.sh --app=acres-production
+    heroku restart --app=acres-production
+    heroku maintenance:off --app=acres-production
+    
 
 
