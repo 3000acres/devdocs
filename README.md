@@ -157,12 +157,30 @@ To work on a story:
 
 ## The deployment process
 
+### Set up heroku
+
+* You need to be added as a collaborator on Heroku, by someone who
+  already is one
+* Install the heroku toolbelt
+* Set up your git remotes
+
+Like this:
+
+    git remote add staging git@heroku.com:acres-staging.git
+    git remote add production git@heroku.com:acres-production.git
+
+
+
 ### Staging
 
 * Once a new feature has been merged to dev, it is pushed to our Heroku
   "staging" environment, http://acres-staging.herokuapp.com
 
 To deploy to staging:
+
+    git checkout dev
+    git pull upstream dev
+    rake
 
     git push staging dev:master
     heroku run rake db:migrate --app=acres-staging
@@ -192,6 +210,10 @@ To deploy to staging:
 * Deploy to production.
 
 To deploy to production:
+
+    git checkout master
+    git pull upstream master
+    rake
 
     heroku maintenance:on --app=acres-production
     git push production master
