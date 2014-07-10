@@ -162,6 +162,8 @@ To work on a story:
 * Once a new feature has been merged to dev, it is pushed to our Heroku
   "staging" environment, http://acres-staging.herokuapp.com
 
+To deploy to staging:
+
     git push staging dev:master
     heroku run rake db:migrate --app=acres-staging
     heroku run script/deploy-tasks.sh --app=acres-staging
@@ -197,6 +199,5 @@ To deploy to production:
     heroku run script/deploy-tasks.sh --app=acres-production
     heroku restart --app=acres-production
     heroku maintenance:off --app=acres-production
-    
 
 
