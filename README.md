@@ -169,8 +169,6 @@ Like this:
     git remote add staging git@heroku.com:acres-staging.git
     git remote add production git@heroku.com:acres-production.git
 
-
-
 ### Staging
 
 * Once a new feature has been merged to dev, it is pushed to our Heroku
@@ -178,13 +176,26 @@ Like this:
 
 To deploy to staging:
 
+    # get the latest dev branch
     git checkout dev
     git pull upstream dev
+
+    # run tests and make sure they are ok
     rake
 
+    # push code up to staging
     git push staging dev:master
+
+    # set config variables (especially if any have changed/been added)
+    rake figaro:heroku[acres-staging]
+    # to check that config vars were set correctly
+    heroku config --app=acres-staging
+
+    # make database changes
     heroku run rake db:migrate --app=acres-staging
     heroku run script/deploy-tasks.sh --app=acres-staging
+
+    # restart
     heroku restart --app=acres-staging
 
 * Click "Deliver" in PT.
@@ -215,11 +226,17 @@ To deploy to production:
     git pull upstream master
     rake
 
+    # in production, we switch maintenance mode on before pushing
     heroku maintenance:on --app=acres-production
+
     git push production master
+    rake figaro:heroku[acres-production]
+    heroku config --app=acres-production
     heroku run rake db:migrate --app=acres-production
     heroku run script/deploy-tasks.sh --app=acres-production
     heroku restart --app=acres-production
+
+    # and switch maintenance mode off again
     heroku maintenance:off --app=acres-production
 
 
