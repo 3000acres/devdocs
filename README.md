@@ -12,6 +12,9 @@ It covers such topics as:
 * the development process
 * how we deploy changes
 
+If you are forking 3000 Acres for another city, and want to learn how to
+set it up and run it for your own site, see [NewSite.md](NewSite.md).
+
 ## Things to sign up for
 
 Dev tools etc:
