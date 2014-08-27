@@ -42,6 +42,10 @@ improvements.
 1. HTML/CSS/design skills - to customise your site
 1. Ruby on Rails - advanced beginner to intermediate level
   * including automated testing using RSpec and Capybara
+  * we are working on making this more like "beginner" level and
+    requiring less coding experience, but at present you will still have
+    to make numerous changes to the app and its test suite to get it
+    working, and be familiar with where Rails keeps things
 1. Git/Github - familiarity with forking, cloning, branches, merging, pushing, etc
 1. Heroku - some experience (or willingness to read docs)
 
