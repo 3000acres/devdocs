@@ -12,21 +12,21 @@ with 3000 Acres
 
 To elaborate further on that second point:
 
-1. We want to collaborate with other cities who are using this codebase
-1. We would like it if a feature added by one city were available to all
-1. We would also like it if improvements and bugfixes from the central
+* We want to collaborate with other cities who are using this codebase
+* We would like it if a feature added by one city were available to all
+* We would also like it if improvements and bugfixes from the central
   codebase (3000acres) could flow easily to other sites using our code
-1. If you fork the code and make changes to it, which are incompatible
+* If you fork the code and make changes to it, which are incompatible
   with 3000acres itself (eg. changing the logo), it makes it hard to
   merge any of your other changes (eg. bugfixes) into the central repository
   because we have to painstakingly separate the local customisations from
   the actual improvements
-1. Therefore, we want to create a system where you can customise your own
+* Therefore, we want to create a system where you can customise your own
   site (change the logo, colours, text on the homepage, etc) without
   having to modify the core code of the app.
-1. We have had this in mind since the start, and support it in some ways,
+* We have had this in mind since the start, and support it in some ways,
   but it is not yet 100% supported.
-1. Work on improving this will occur through 2014-2015.  We are seeking
+* Work on improving this will occur through 2014-2015.  We are seeking
   assistance/collaboration/funding from other cities using the 3000acres
   codebase to help us achieve this.  If you can help in any way, please
   get in touch via 3000 Acres contact address 
@@ -39,37 +39,39 @@ improvements.
 
 ## Required skills/knowledge
 
-1. HTML/CSS/design skills - to customise your site
-1. Ruby on Rails - advanced beginner to intermediate level
+* HTML/CSS/design skills - to customise your site
+* Ruby on Rails - advanced beginner to intermediate level
   * including automated testing using RSpec and Capybara
   * we are working on making this more like "beginner" level and
     requiring less coding experience, but at present you will still have
     to make numerous changes to the app and its test suite to get it
     working, and be familiar with where Rails keeps things
-1. Git/Github - familiarity with forking, cloning, branches, merging, pushing, etc
-1. Heroku - some experience (or willingness to read docs)
+* Git/Github - familiarity with forking, cloning, branches, merging, pushing, etc
+* Heroku - some experience (or willingness to read docs)
 
 ## Required infrastructure
 
-1. Your own development machine - preferably OSX or Linux (Rails dev on
+* Your own development machine - preferably OSX or Linux (Rails dev on
   Windows is quite fiddly to set up, and basically unsupported)
-1. Register a domain name
-1. Set up an email address for contact, eg. hello@yoursite.org
-1. [Github](http://github.com) account (free) -- code repository
-1. [Heroku](http://heroku.com) account (free) -- hosting
-1. [Mailchimp](http://mailchimp.com) account (free or low cost) -- sends newsletters
-1. [Mapbox](http://mapbox.com) account ($5/month tier) -- displays maps
+* Register a domain name
+* Set up an email address for contact, eg. hello@yoursite.org
+* [Github](http://github.com) account (free) -- code repository
+* [Heroku](http://heroku.com) account (free) -- hosting
+* [Mailchimp](http://mailchimp.com) account (free or low cost) -- sends newsletters
+* [Mapbox](http://mapbox.com) account ($5/month tier) -- displays maps
   on your site
 
 ### Highly recommended
 
-1. [Travis CI](http://travis-ci.org) account (free) -- automated testing
-1. [Coveralls](http://coveralls.io) account (free) -- automated testing
-1. Analytics -- shows how many visitors you have to your site
+* [Travis CI](http://travis-ci.org) account (free) -- automated testing
+* [Coveralls](http://coveralls.io) account (free) -- automated testing
+* Analytics -- shows how many visitors you have to your site
   * We recommend [Clicky](http://clicky.com) (free or lowest paid tier)
     or [Google Analytics](http://google.com/analytics) (free)
 
 ## Create your own code repository
+
+The first step is to get a copy of the code you can work on.
 
 1. Set up a Github organisation
   * We recommend setting up a github organisation for your actual
@@ -92,6 +94,11 @@ improvements.
   branch.  This will make it easier when people do pull requests.
 
 ## Set up hosting on Heroku
+
+For the next few sections we'll just be setting up lots of third-party
+services for various uses.  We set these up in advance because you will
+need some information from them (eg. API keys) to configure your 3000
+Acres app.
 
 1. Create staging and production apps on heroku
   * The free tier should be fine unless your site gets huge
